@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation Demo</title>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div>
+		<form action="#" onsubmit="return validateForm()" id="demoForm">
+		    <div>
+		        <label for="name">Name:</label>
+		        <input type="text" id="name" data-content="name" name="user_name" />
+		    </div>
+		    <div>
+		        <label for="mail">E-mail:</label>
+		        <input type="email" id="mail" data-content="email" name="user_email" />
+		    </div>
+		    <div>
+		        <label for="mobile">Mobile:</label>
+		        <input type="text" id="mobile" data-content="mobile" name="user_mobile" />
+		    </div>
+		    <div>
+		        <label for="website">Website:</label>
+		        <input type="text" id="website" data-content="website" name="user_website" />
+		    </div>
+		    <div>
+		        <label for="msg">Message:</label>
+		        <textarea id="msg" name="user_message"></textarea>
+		    </div>
+		    
+		    <div class="button">
+		        <button type="submit">Send your message</button>
+		    </div>
+		</form>
+	</div>
+
+	<div class="result">
+		Validation result:
+		<p/>
+		<table id="result-table"></table>
+	</div>
+
+	<script type="text/javascript" src="js/ValidationUtil.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

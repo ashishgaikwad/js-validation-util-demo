@@ -46,6 +46,7 @@ window.ValidationUtil = undefined;
 
 			var value = element.value.trim();
 			var contentType = element.dataset.content;
+			var classList = element.classList;
 			var result = {type: contentType, message : undefined};
 
 			if(!value || value.length == 0) {
@@ -54,6 +55,8 @@ window.ValidationUtil = undefined;
 			else {
 				result.message = matchingPatterns[contentType].test(value) ? "success" : "invalid " + contentType + " format";
 			}
+
+			(result.message === "success") ? classList.remove("invalid") : classList.add("invalid");
 
 			return result;
 		}
